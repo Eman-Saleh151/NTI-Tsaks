@@ -82,7 +82,7 @@ class Task{
         }
     }
      
-    static search = (req, res) => {
+    static search = (req,res) =>{
         let search = req.query.search;
         let results = [];
         const allTasks = deal.readJsonData(fileName)
