@@ -95,15 +95,14 @@ class Task{
     static search = async(req,res) =>{
         try{
             let search = req.query.search;
-            connectDb(async(db)=>{
-                // const results = await db.collection("Tasks").find({title:{$regex:search}} ).toArray()
-                const results = await taskModel.find({ $or: [ { title:{$regex:search} }, { content: {$regex:search}} ] } ).exec()
+            
+                const results = await taskModel.find({ $or: [ { title:{$regex:search} }, { content: {$regex:search}} ] } )
+                console.log(results)
                 res.render("search", {
                         results,
                         hasData: results.length
                     })
-            })
-
+            
         }
         catch(e){
             console.log(e.massage);
