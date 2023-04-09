@@ -1,0 +1,58 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <h3>All Tasks</h3>
+    <div class="d-flex justify-content-between mb-4">
+            <a href="/add" class="btn btn-primary">
+                Add Task
+            </a>
+            <a href="/delAll" class="btn btn-danger">
+                Delete All
+            </a>
+    </div>
+    <form class="d-flex my-3" role="search" method="get" action="/search">
+      <input class="form-control me-2" 
+      type="search" 
+      placeholder="Search" 
+      aria-label="Search" 
+      name="search"
+      id="search">
+      <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>content</th>
+            <th>dueDate</th>
+            <th>status</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasData}}
+            {{#each allTasks}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{title}}</td>
+                <td>{{content}}</td>
+                <td>{{dueDate}}</td>
+                <td>{{status}}</td>
+                <td>
+                    <a href="/single/{{_id}}" class="btn btn-primary mx-3">Show</a>
+                    <a href="/edit/{{_id}}" class="btn btn-warning mx-3">Edit</a>
+                    {{!-- <a href="/status/{{_id}}" class="btn btn-success mx-3">Activate</a> --}}
+                    <a href="/del/{{_id}}" class="btn btn-danger mx-3">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr>
+                <td colspan="5">No Tasks yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}

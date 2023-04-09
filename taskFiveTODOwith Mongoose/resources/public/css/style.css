@@ -1,0 +1,15 @@
+
+img{
+    width: 600px;
+    height: 600px;
+}
+h1 , h2 ,h3 {
+    color: #0d6efd;
+}
+h1{
+    font-weight: bolder;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
