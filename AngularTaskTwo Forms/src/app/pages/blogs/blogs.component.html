@@ -1,0 +1,67 @@
+<!-- <div class="container">
+
+    <div *ngIf="divFlag ; else data">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <ng-template #data>
+        <div>
+            Another ..div
+        </div>
+    </ng-template>
+    <button class="btn btn-primary mx-5" (click)="divFlag = true">show Div</button>
+    <button class="btn btn-primary" (click)="divFlag = !divFlag "> Toggel Div</button>
+
+    <div *ngIf="arr.length < 1 ;then True ; else False ">
+        <h1>Frist Div</h1>
+    </div>
+
+
+    <ng-template #True>
+        <h1>true div</h1>
+    </ng-template>
+    <ng-template #False>
+        <h1>false div</h1>
+    </ng-template>
+
+</div> -->
+
+<!-- ----------------------------- ng switch --------------------- -->
+<!-- <div class="container">
+    <div [ngSwitch]="num">
+            <ng-container *ngFor="let i of arr">
+            <div *ngSwitchCase=" i "> number = {{i}}</div>
+        </ng-container>
+            <div *ngSwitchCase=" '2' ">number = 2</div>
+            <div *ngSwitchCase="'3'">number = 3</div>
+            <div *ngSwitchCase="'4'">number = 4</div>
+
+            <div *ngSwitchDefault>
+                invalid number
+            </div>
+
+        </div>
+</div> -->
+<!-- <div class="container">
+    <div [ngSwitch]="year">
+            <div *ngSwitchCase=" '1' ">jun</div>
+            <div *ngSwitchCase="'2'">feb</div>
+            <div *ngSwitchCase="'3'">mars</div>
+            <div *ngSwitchCase="'4'">April</div>
+        </div>
+</div> -->
+
+<!-- -------------------------ngclass & ngmodel---------- -->
+<!-- <h2 [ngClass]="{'bg-warning' :classFlag}">Lorem ipsum dolor sit amet.</h2>
+
+<h2 [ngClass]="[class1,class2]">Lorem ipsum dolor sit amet.</h2>
+
+<h2 [ngClass]="(arr.length>20 ? 'bg-info' : 'bg-primary')">Lorem ipsum dolor sit amet.</h2>
+
+<button class="btn btn-danger" (click)="class1 = 'bg-dark' ; textRed='green'">change background</button>
+
+
+<h1 [ngStyle]="{'color' : 'blue'}">hello</h1>
+<h1 [ngStyle]="{'color' : textRed, 'border': '2px solid red'}">hello</h1>
+
+<h1 [ngStyle]="{'background': arr.length> 2 ? 'danger' : 'gold' }">hello</h1> -->
