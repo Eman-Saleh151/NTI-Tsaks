@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+      <div class="row">
+        <input type="text" placeholder="search" class="form-control text-center my-4" [(ngModel)]="searchValue"/>
+        <button class="form-control btn btn-primary" (click)="handleSearch()">search</button>
+      </div>
+      <div
+        class="card p-3 m-2 mx-auto text-center" *ngFor="let post of postsArray">
+        <div class="card-body col-12">
+          <h2>{{ post.id }}</h2>
+          <h3 class=" mb-2 text-body-secondary"> title: {{ post.title }}</h3>
+<p>mmm</p>       
+        </div>
+      </div>
+    </div>
+  </div>
